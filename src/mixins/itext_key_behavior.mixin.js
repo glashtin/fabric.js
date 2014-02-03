@@ -46,7 +46,8 @@ fabric.util.object.extend(fabric.IText.prototype, /** @lends fabric.IText.protot
 
   onClick: function() {
     // No need to trigger click event here, focus is enough to have the keyboard appear on Android
-    this.hiddenTextarea.focus();
+    if (this.hiddenTextarea != null)
+      this.hiddenTextarea.focus();
   },
 
   /**
